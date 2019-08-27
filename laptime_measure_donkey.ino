@@ -19,10 +19,10 @@ float calclaptime(){
 
 void outputToOLED(){
   oled.clear();
-  for(int i = 0; i < 3; i++){
+  for(int i = 0; i < 6; i++){
     int idx = (lidx + BUFSIZE - i) % BUFSIZE;
     oled.setCursor(0, i);
-    oled.print((int)laptimes[idx]);
+    oled.print((unsigned long)laptimes[idx]);
   }
 }
 
